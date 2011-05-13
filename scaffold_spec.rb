@@ -1,7 +1,7 @@
 Scaffoldhub::Specification.new do
 
   # Github URL where you will post your scaffold - the specified folder must contain this file
-  base_url  'https://github.com/rocky-jaiswal/comments_captcha_scaffold'
+  base_url  'https://github.com/rocky-jaiswal/comments_captcha_scaffold/blob/master'
 
   # The name of your new scaffold: should be a single word
   name 'comments_captcha_scaffold'
