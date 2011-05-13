@@ -4,7 +4,7 @@ Scaffoldhub::Specification.new do
   base_url  'https://github.com/rocky-jaiswal/comments_captcha_scaffold/blob/master'
 
   # The name of your new scaffold: should be a single word
-  name 'comments_captcha_scaffold'
+  name 'comments_captcha'
 
   # Metadata about this scaffold - these values are only used for display on scaffoldhub.org:
   metadata do
