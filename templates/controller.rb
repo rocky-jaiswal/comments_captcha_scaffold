@@ -38,7 +38,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "params[:#{singular_table_name}]") %>
 
     respond_to do |format|
-      if @<%= orm_instance.save %> && validate_recap(params, @<%= orm_instance.errors %>)
+      if validate_recap(params, @<%= orm_instance.errors %>) && @<%= orm_instance.save %>
         format.html { redirect_to(@<%= singular_table_name %>, :notice => '<%= human_name %> was successfully created.') }
         format.xml  { render :xml => @<%= singular_table_name %>, :status => :created, :location => @<%= singular_table_name %> }
       else
