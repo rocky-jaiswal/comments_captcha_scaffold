@@ -32,6 +32,10 @@ class <%= controller_class_name %>Controller < ApplicationController
     end
   end
 
+  def edit
+    @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
+  end
+
   # POST <%= route_url %>
   # POST <%= route_url %>.xml
   def create
@@ -43,6 +47,20 @@ class <%= controller_class_name %>Controller < ApplicationController
         format.xml  { render :xml => @<%= singular_table_name %>, :status => :created, :location => @<%= singular_table_name %> }
       else
         format.html { render :action => "new" }
+        format.xml  { render :xml => @<%= orm_instance.errors %>, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+    @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
+
+    respond_to do |format|
+      if <%= orm_class.update_attributes(class_name, "params[:#{singular_table_name}]") %>
+        format.html { redirect_to(@<%= singular_table_name %>, :notice => '<%= human_name %> was successfully updated.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
         format.xml  { render :xml => @<%= orm_instance.errors %>, :status => :unprocessable_entity }
       end
     end
