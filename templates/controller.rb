@@ -56,7 +56,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
 
     respond_to do |format|
-      if <%= orm_class.update_attributes(class_name, "params[:#{singular_table_name}]") %>
+      if @<%= orm_instance.update_attributes("params[:#{singular_table_name}]") %>
         format.html { redirect_to(@<%= singular_table_name %>, :notice => '<%= human_name %> was successfully updated.') }
         format.xml  { head :ok }
       else
