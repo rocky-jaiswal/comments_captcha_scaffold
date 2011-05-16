@@ -46,6 +46,7 @@ Scaffoldhub::Specification.new do
     view 'new.html.erb'
     view 'index.html.erb'
     view 'show.html.erb'
+    view 'edit.html.erb'
   end
 
   # Other keywords available are:
