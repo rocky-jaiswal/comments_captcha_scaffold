@@ -10,7 +10,7 @@ Scaffoldhub::Specification.new do
   metadata do
 
     # A short paragraph describing what this scaffold does
-    description 'A simple rails application with Google re-captcha configured. See my blog - http://rockyj.in for more information.'
+    description 'A simple rails application with Google re-captcha configured. See my blog - http://rockyj.in/?p=118 for more information.'
 
     # 4x3 aspect ratio screen shot
     screenshot 'comments_captcha_screenshot.png'
@@ -22,7 +22,7 @@ Scaffoldhub::Specification.new do
     #parameter_example 'FIELD_NAME'
 
     # Optionally post a link to an article you write explaining how the scaffold works.
-    blog_post 'http://rockyj.in' 
+    blog_post 'http://rockyj.in/?p=118' 
   end
 
   # Define a model template - this ERB file will be used to generate a new
