@@ -61,7 +61,7 @@ Scaffoldhub::Specification.new do
   # Add a gem to the Gemfile
   gem 'ruby-recaptcha'
 
-  post_install_message <<MESSAGE
+ post_install_message <<MESSAGE
 Now please run "bundle install" to install the ruby-recaptcha gem, and
 then run "rake db:migrate" to create your new PLURAL_NAME database table.
 Next you need to edit your ApplicationController, ApplicationHelper and
