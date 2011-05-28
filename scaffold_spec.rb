@@ -69,5 +69,5 @@ Scaffoldhub::Specification.new do
  Please see http://rockyj.in/?p=118 for detailed instructions.
  Finally run your Rails server and open http://localhost:3000/PLURAL_NAME
  to see the index page.
-INSTALL_MESSAGE 
+INSTALL_MESSAGE
 end
